@@ -57,6 +57,7 @@
   when:
     - not ansible_check_mode
     - go_installed.rc == 1
+    - golang_version < "1.17.0"
 
 - name: singularity | create directory for singularity
   file:
